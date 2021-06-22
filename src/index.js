@@ -1,33 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
+import App from 'components/App';
+import reportWebVitals from './reportWebVitals';
 
-const shows = ['Game of Thrones', 'The Wire', 'Breaking Bad']
-let inputValue = '';
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-const handleInputChange = (evt) => {
-  inputValue = evt?.target?.value;
-  renderElements();
-}
-
-const handleAddClick = () => {
-  shows.push(inputValue);
-  renderElements();
-}
-
-const renderElements = () => {
-  const elements = (
-    <div>
-      <div>
-        <input value={inputValue} onChange={handleInputChange} />
-        <button onClick={handleAddClick}>Add Show</button>
-      </div>
-      <p>{shows.join(', ')}</p>
-    </div>
-  );
-  ReactDOM.render(
-    elements, 
-    document.getElementById('root')
-  );
-}
-
-renderElements();
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
