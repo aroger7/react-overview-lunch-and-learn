@@ -1,0 +1,14 @@
+.shows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.shows-input {
+  margin-right: 4px;
+}
+
+.shows-list {
+  padding-left: 0;
+}
