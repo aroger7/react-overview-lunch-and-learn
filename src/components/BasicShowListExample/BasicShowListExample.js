@@ -15,13 +15,13 @@ const BasicShowListExample = () => {
   }
 
   return (
-    <div class="shows">
+    <div className="shows">
       <div>
         <input className="shows-input" value={inputValue} onChange={handleInputChange} />
         <button onClick={handleAddClick}>Add Show</button>
       </div>
       {shows.length > 5 && <p>We're over five shows? ALL HAIL TELEVISION</p>}
-      <ul class="shows-list">
+      <ul className="shows-list">
         {shows.map(show => <li key={show}>{show}</li>)}
       </ul>
     </div>

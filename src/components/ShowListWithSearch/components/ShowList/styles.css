@@ -1,0 +1,55 @@
+.my-shows {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.show-list-title {
+  margin-top: 0;
+  color: #0784B5;
+}
+
+.show-list {
+  padding: 0;
+  margin: 16px 0 0;
+  list-style: none;
+  flex: 1 1 0;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.show-list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.show-controls {
+  opacity: 0;
+  transition: 0.3s opacity ease-in-out;
+}
+
+.show-list-item:hover > .show-controls {
+  opacity: 1;
+}
+
+.show-image {
+  height: 80px;
+}
+
+.show-name {
+  font-size: 32px;
+  color: #0784B5;
+  margin: 0 16px;
+}
+
+.show-remove-btn {
+  font-size: 32px;
+  color: red;
+  background: transparent;
+  border: none;
+  margin-left: 8px;
+  cursor: pointer;
+}
